@@ -1,0 +1,5 @@
+src/data/
+src/pubsub/
+src/uploads/
+
+src/static/tailwind.css
