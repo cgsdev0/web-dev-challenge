@@ -18,7 +18,7 @@ RESULT="$(curl \
       "role": "user",
       "parts": [
         {
-          "text": "generate text for a thank you card with the following information:\n\nthe card is from ${FORM_DATA[sender_name]}\nthe card is to ${FORM_DATA[recipient_name]}\nthe reason for the thank you is \"${FORM_DATA[reason]}\"\n\nthe front_text should be a short greeting related to the reason for the thank you.\n\nthe image_description should be a prompt for the stable diffusion model to create a fun visual for the front of the card.\n\nthe inside text should be a paragraph expressing gratitude to the recipient.\n"
+          "text": "generate text for a thank you card with the following information:\n\nthe card is from ${FORM_DATA[sender_name]}\nthe card is to ${FORM_DATA[recipient_name]}\nthe reason for the thank you is \"${FORM_DATA[reason]}\"\n\nthe front_text should be a short greeting related to the reason for the thank you.\n\nthe image_description should be a prompt for the stable diffusion model to create a fun visual for the front of the card.\n\nthe inside_text should be a paragraph expressing gratitude to the recipient. There's no need for a sign off at the end, the card will be hand signed later by the sender.\n"
         }
       ]
     }
@@ -53,7 +53,7 @@ RESULT="$(curl \
 JSON
 )"
 
-FRONT_TEXT="$(echo "$RESULT" | jq -r ".front_text")"
+FRONT_TEXT="$(echo "$RESULT" | jq -r ".front_text" | sed 's/\n/<br><br>/g')"
 INSIDE_TEXT="$(echo "$RESULT" | jq -r ".inside_text")"
 IMAGE_DESCRIPTION="$(echo "$RESULT" | jq -r ".image_description")"
 

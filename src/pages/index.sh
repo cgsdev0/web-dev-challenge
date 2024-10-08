@@ -115,17 +115,17 @@ htmx_page << HTML
     <form method="POST" action="/generate" class="space-y-6">
       <div>
         <label for="sender_name" class="block text-sm font-medium text-gray-700">Your Name</label>
-        <input type="text" id="sender_name" placeholder="You" name="sender_name" value="badcop" class="mt-1 block w-full p-2 rounded-md border-gray-300 bg-gray-200 focus:border-blue-500 focus:ring-blue-500 shadow-sm sm:text-sm" required>
+        <input type="text" id="sender_name" placeholder="You" name="sender_name" class="mt-1 block w-full p-2 rounded-md border-gray-300 bg-gray-200 focus:border-blue-500 focus:ring-blue-500 shadow-sm sm:text-sm" required>
       </div>
 
       <div>
         <label for="recipient_name" class="block text-sm font-medium text-gray-700">Recipient Name</label>
-        <input type="text" placeholder="Someone" id="recipient_name" value="sarah" name="recipient_name" class="mt-1 block w-full p-2 rounded-md border-gray-300 bg-gray-200 focus:border-blue-500 focus:ring-blue-500 shadow-sm sm:text-sm" required>
+        <input type="text" placeholder="Someone" id="recipient_name" name="recipient_name" class="mt-1 block w-full p-2 rounded-md border-gray-300 bg-gray-200 focus:border-blue-500 focus:ring-blue-500 shadow-sm sm:text-sm" required>
       </div>
 
       <div>
         <label for="reason" class="block text-sm font-medium text-gray-700">Reason for Thanks</label>
-        <textarea placeholder="What are you grateful for?" id="reason" name="reason" rows="4" class="mt-1 block w-full p-2 rounded-md border-gray-300 bg-gray-200 focus:border-blue-500 focus:ring-blue-500 shadow-sm sm:text-sm resize-y" required>thank you for making this website</textarea>
+        <textarea placeholder="What are you grateful for?" id="reason" name="reason" rows="4" class="mt-1 block w-full p-2 rounded-md border-gray-300 bg-gray-200 focus:border-blue-500 focus:ring-blue-500 shadow-sm sm:text-sm resize-y" required></textarea>
       </div>
 
 
