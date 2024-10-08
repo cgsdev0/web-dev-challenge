@@ -19,7 +19,7 @@ rm -rf pubsub
 
 mkdir -p sessions
 mkdir -p pubsub
-mkdir -p data
+mkdir -p data/cards
 mkdir -p uploads
 
 PORT=${PORT:-3000}

@@ -10,7 +10,7 @@ curl \
 -d @- << JSON | jq -r '.predictions[0]' | base64 -d
 {
   "instances": [
-    "generate a beautiful mountain vista"
+    "${QUERY_PARAMS[prompt]}"
   ]
 }
 JSON
