@@ -11,6 +11,6 @@ if [[ "$REQUEST_METHOD" == "POST" ]]; then
   echo "$COUNT" > data/count
 fi
 
-htmx_page << EOF
+htmx_page << HTML
   <p id="count" class="mt-3" hx-swap-oob="true">$COUNT</p>
-EOF
+HTML
